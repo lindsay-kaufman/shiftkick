@@ -1,0 +1,16 @@
+.grid-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.shifts {
+  background-color: #6FC64D;
+  padding: 1rem 2rem;
+
+  button {
+    background-color: white;
+    border-radius: 6px;
+    padding: 5px 18px;
+    white-space: nowrap;
+  }
+}

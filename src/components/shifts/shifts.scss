@@ -1,0 +1,13 @@
+.shift {
+  display: flex;
+  flex-direction: column;
+
+  .headers {
+      background-color: #87CEFB;
+    }
+
+  input {
+    width: 100%;
+    border: none;
+  }
+}
