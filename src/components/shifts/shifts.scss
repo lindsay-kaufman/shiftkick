@@ -1,13 +1,54 @@
 .shift {
+  border-top: 6px solid #6FC64D;
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   .headers {
-      background-color: #87CEFB;
+    background-color: #87CEFB;
+    color: navy;
+    font-size: 16px;
+    padding-bottom: 8px;
+  }
+
+  textarea {
+    border: none;
+    font-family: 'Lato', sans-serif;
+    padding-top: 12px;
+    width: 90%;
+  }
+
+  table {
+    border-spacing: inherit;
+    font-size: 15px;
+
+    tr:nth-of-type(even) {
+      background-color: #F1F1F1;
+
+       textarea {
+        background-color: #F1F1F1;
+      }
     }
 
-  input {
-    width: 100%;
-    border: none;
+    tr:last-of-type {
+      background-color: white;
+    }
+
+    button {
+      background-color: #F1F1F1;
+      border: 1px solid #F1F1F1;
+      border-radius: 8px;
+      padding: 5px 25px;
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+      margin: 4px 0;
+
+      &:hover {
+        color: darkgray;
+        cursor: pointer;
+      }
+    }
   }
+
 }

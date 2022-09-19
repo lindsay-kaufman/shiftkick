@@ -1,17 +1,19 @@
 import { useState } from "react";
-import { Grid } from "../grid/grid";
+import { Shifts } from "../shifts/shifts";
+
 import './wrapper.scss';
 
 export const Wrapper = () => {
-    const shifts = new Array(4)
+    let shifts = [<Shifts shiftNumber={0} />, <Shifts shiftNumber={1} /> ]
     const [activeShift, setActiveShift] = useState(0)
 
-    const renderShiftList = () => {
+    const renderShifts = () => {
        for (let i = 0; i < shifts.length; i++) {
            return (
                <button
                    key={i}
                    onClick={() => setActiveShift(i)}
+                   className="render-button"
                >
                    {`Shift ${i}`}
                </button>
@@ -19,13 +21,18 @@ export const Wrapper = () => {
        }
     }
 
+    const addShift = () => {
+        shifts.push(<Shifts shiftNumber={shifts.length}/>)
+    }
+
     return (
         <div className="wrapper">
             <div className="grid-wrapper">
                 <aside className="shifts">
-                    {renderShiftList()}
+                    {renderShifts()}
+                    <button className="add-shift-button" onClick={addShift}>+</button>
                 </aside>
-                <Grid shiftNumber={activeShift}/>
+                <Shifts shiftNumber={activeShift} />
             </div>
 
         </div>

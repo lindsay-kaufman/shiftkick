@@ -6,21 +6,21 @@ const Line = ({val, key}) => (
             {val.line}
         </td>
         <td>
-            <input
+            <textarea
                 type="text"
                 placeholder={val.issue}
                 defaultValue={val.issue}
             />
         </td>
         <td>
-            <input
+            <textarea
                 type="text"
                 placeholder={val.actionTaken}
                 defaultValue={val.actionTaken}
             />
         </td>
         <td>
-            <input
+            <textarea
                 type="text"
                 placeholder={val.followUpItems}
                 defaultValue={val.followUpItems}

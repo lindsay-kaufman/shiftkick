@@ -5,7 +5,6 @@ function App() {
     const user = "User"
     return (
         <div className="App">
-            {`Hi, ${user}`}
             <Wrapper />
         </div>
     );
